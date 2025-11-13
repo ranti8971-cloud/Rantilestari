@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ms Glow Official - Skincare No.1 Indonesia</title>
+  <meta name="description" content="Ms Glow - Skincare aman BPOM, glowing alami, cocok untuk semua jenis kulit. Produk resmi 100% original."/>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+  <style>
+    :root {
+      --pink: #ff69b4;
+      --soft-pink: #ffe4f0;
+      --light-pink: #fff5f9;
+      --dark-pink: #e91e63;
+      --white: #ffffff;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: #333;
+    }
+    .navbar {
+      background-color: var(--pink) !important;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 600;
+    }
+    .nav-link:hover { opacity: 0.8; }
+
+    /* Hero Carousel */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      background: no-repeat center center/cover;
+    }
+    .carousel-caption {
+      background: rgba(255, 105, 180, 0.7);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    /* Section */
+    .section-pink { background-color: var(--light-pink); }
+    .section-white { background-color: var(--white); }
+
+    /* Card Produk */
+    .card-produk {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+      transition: 0.4s;
+    }
+    .card-produk:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+    }
+    .card-produk img {
+      transition: 0.4s;
+    }
+    .card-produk:hover img {
+      transform: scale(1.1);
+    }
+    .harga-lama { text-decoration: line-through; color: #999; }
+    .harga-baru { color: var(--dark-pink); font-weight: 700; font-size: 1.3rem; }
+
+    /* Testimoni */
+    .testi-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+    }
+
+    /* Promo */
+    .promo-badge {
+      position: absolute;
+      top: 15px; right: 15px;
+      background: var(--dark-pink);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* WhatsApp Button */
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--pink), var(--dark-pink));
+      color: white;
+    }
+    .btn-pink {
+      background-color: var(--dark-pink);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+    }
+    .btn-pink:hover {
+      background-color: #c2185b;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-bold" href="#">Ms Glow</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#promo">Promo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <section id="home">
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/random/1600x900/?skincare,glowing')">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-4 fw-bold">Ms Glow Glow Like a Star</h1>
+            <p class="fs-4">Wajah cerah, sehat, dan glowing dalam 14 hari!</p>
+            <a href="#produk" class="btn btn-light btn-lg">Lihat Produk</a>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/random/1600x900/?beauty,pink')">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-4 fw-bold">Paket Acne Glow</h1>
+            <p class="fs-4">Atasi jerawat membandel, kulit halus bebas bruntusan</p>
+            <a href="#produk" class="btn btn-light btn-lg">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Tentang Ms Glow -->
+  <section id="tentang" class="py-5 section-pink">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="ms glow.jpg" class="img-fluid rounded shadow" alt="Ms Glow">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold" style="color: var(--dark-pink);">Kenapa Harus Ms Glow?</h2>
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-pink fs-4"></i> <strong>BPOM & Halal MUI</strong></li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-pink fs-4"></i> 100% Original & Aman</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-pink fs-4"></i> Terbukti pada 5+ juta customer</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-pink fs-4"></i> Dokter spesialis kulit meracik</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-pink fs-4"></i> Garansi uang kembali</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Unggulan -->
+  <section id="produk" class="py-5 section-white">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold" style="color: var(--dark-pink);">Produk Best Seller</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-produk position-relative">
+            <span class="promo-badge">Best Seller</span>
+            <img src="acne.jpg" class="card-img-top" alt="Acne Series">
+            <div class="card-body text-center p-4">
+              <h5>Paket Acne Glow</h5>
+              <p class="harga-lama">Rp 350.000</p>
+              <p class="harga-baru">Rp 275.000</p>
+              <a href="#order" class="btn btn-pink btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-produk position-relative">
+            <span class="promo-badge">Diskon 30%</span>
+            <img src="ultimate.jpg" class="card-img-top" alt="Whitening">
+            <div class="card-body text-center p-4">
+              <h5>Paket Ultimate Whitening</h5>
+              <p class="harga-lama">Rp 450.000</p>
+              <p class="harga-baru">Rp 315.000</p>
+              <a href="#order" class="btn btn-pink btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-produk">
+            <img src="paket ms.glow.jpg" class="card-img-top" alt="Glowing">
+            <div class="card-body text-center p-4">
+              <h5>Paket Glowing</h5>
+              <p class="harga-lama">Rp 300.000</p>
+              <p class="harga-baru">Rp 250.000</p>
+              <a href="#order" class="btn btn-pink btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="py-5 section-pink">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold" style="color: var(--dark-pink);">Apa Kata Mereka?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testi-card">
+            <p class="fst-italic">"Jerawatku hilang dalam 10 hari! Sekarang kulitku glowing banget!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="nagita.jpg" class="rounded-circle me-3" width="60" alt="testi">
+              <div>
+                <strong>nagita slavina</strong><br>
+                <small>Jakarta</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testi-card">
+            <p class="fst-italic">"Awalnya ragu, tapi setelah 2 minggu kulitku cerah merata. Recommended!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="lesti.jpg" class="rounded-circle me-3" width="60" alt="testi">
+              <div>
+                <strong>lesti kejora</strong><br>
+                <small>Bandung</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testi-card">
+            <p class="fst-italic">"Paket whitening-nya bikin kulitku putih alami, bukan abu-abu!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="luna.jpg" class="rounded-circle me-3" width="60" alt="testi">
+              <div>
+                <strong>luna maya</strong><br>
+                <small>denpasar,bali</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Spesial -->
+  <section id="promo" class="py-5 section-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color: var(--dark-pink);">PROMO HARI INI!</h2>
+      <div class="bg-pink text-white p-5 rounded-4 shadow-lg" style="background: linear-gradient(45deg, var(--pink), var(--dark-pink));">
+        <h1 class="display-5">BELI 2 GRATIS 1</h1>
+        <p class="lead">+ Free Ongkir Seluruh Indonesia</p>
+        <p class="fs-4">Hanya sampai <strong>30 November 2025</strong></p>
+        <a href="#order" class="btn btn-light btn-lg px-5">Klaim Sekarang</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara Order -->
+  <section id="order" class="py-5 section-pink">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold" style="color: var(--dark-pink);">Cara Order Sangat Mudah!</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="bi bi-cursor-fill fs-1 text-pink mb-3"></i>
+            <h5>1. Pilih Produk</h5>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="bi bi-chat-dots-fill fs-1 text-pink mb-3"></i>
+            <h5>2. Chat WhatsApp</h5>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-4 rounded-4 shadow">
+            <i class="bi bi-truck fs-1 text-pink mb-3"></i>
+            <h5>3. Barang Dikirim</h5>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://wa.me/6281234567890?text=Halo%20Ms%20Glow,%20saya%20mau%20order%20paket%20acne" 
+           class="btn btn-success btn-lg px-5">
+          <i class="bi bi-whatsapp"></i> Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Ms%20Glow,%20saya%20mau%20konsultasi%20skincare" 
+     class="wa-float d-flex align-items-center justify-content-center" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="py-5 text-center">
+    <div class="container">
+      <h3 class="fw-bold">Ms Glow Official Store</h3>
+      <p class="mb-1">Jalan Kecantikan No. 123, Bandung</p>
+      <p>WA: 0812-3456-7890 | IG: @msglowofficial</p>
+      <p><small>© 2025 Ms Glow Indonesia - Skincare No.1 Terpercaya</small></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
