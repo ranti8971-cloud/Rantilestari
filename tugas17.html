@@ -358,3 +358,311 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G2G Beauty - Glow to Glow</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins (feminin & modern) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #444;
+        }
+        
+        /* Warna Tema Pink */
+        :root {
+            --pink: #e91e63;
+            --pink-light: #fce4ec;
+            --pink-dark: #d81b60;
+            --white: #ffffff;
+        }
+        
+        .navbar {
+            background: var(--white) !important;
+            box-shadow: 0 2px 10px rgba(233, 30, 99, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--pink) !important;
+        }
+        
+        .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--pink) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(233, 30, 99, 0.85), rgba(233, 30, 99, 0.9)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1600') center/cover no-repeat;
+            color: white;
+            padding: 180px 0 120px;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        
+        .btn-pink {
+            background: var(--white);
+            color: var(--pink);
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.4s;
+        }
+        
+        .btn-pink:hover {
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Title */
+        .section-title {
+            color: var(--pink);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--pink);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Product Card */
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.1);
+            transition: 0.4s;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.2);
+        }
+        
+        .product-card img {
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .price {
+            color: var(--pink);
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        /* Testimoni */
+        .testimonial {
+            background: var(--pink-light);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--pink);
+            color: white;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: white;
+            color: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">G2G</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <h1 class="mb-4">Glow to Glow</h1>
+            <p class="mb-5">Temukan kecantikan alami dengan produk premium G2G – dirancang khusus untuk kulit perempuan Indonesia</p>
+            <a href="#products" class="btn btn-pink btn-lg">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Produk Best Seller</h2>
+                <p class="mt-4 text-muted">P">Pilihan terbaik ribuan wanita Indonesia</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card text-center">
+                        <img src="serum g2g.webp" class="img-fluid" alt="Serum">
+                        <div class="p-4">
+                            <h5>Serum G2g</h5>
+                            <p class="text-muted">Mencerahkan & melembapkan dalam 14 hari</p>
+                            <div class="price">Rp 259.000</div>
+                            <a href="#" class="btn btn-outline-pink mt-3">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card text-center">
+                        <img src="cushion.jpg" class="img-fluid" alt="Cushion">
+                        <div class="p-4">
+                            <h5> G2g cushion</h5>
+                            <p class="text-muted">Flawless finish dengan SPF 50+</p>
+                            <div class="price">Rp 329.000</div>
+                            <a href="#" class="btn btn-outline-pink mt-3">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card text-center">
+                        <img src="lip serum g2g.jpg" class="img-fluid" alt="Lip Cream">
+                        <div class="p-4">
+                            <h5>lip serum G2g</h5>
+                            <p class="text-muted">Tahan lama 12 jam, transferproof</p>
+                            <div class="price">Rp 179.000</div>
+                            <a href="#" class="btn btn-outline-pink mt-3">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1570194066988-2c2e7d2d8c9f?w=800" class="img-fluid rounded-3 shadow" alt="About G2G">
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <h2 class="section-title">Tentang G2G Beauty</h2>
+                    <p class="mt-4 lead">G2G hadir dari cinta untuk setiap wanita yang ingin tampil percaya diri dengan kulit sehat bercahaya.</p>
+                    <p>Semua produk kami menggunakan bahan alami premium, cruelty-free, dan sudah terda BPOM & Halal. Kami percaya setiap wanita berhak mendapatkan produk berkualitas dengan harga terjangkau.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3">✓ 100% Original & BPOM</li>
+                        <li class="mb-3">✓ Halal Certified</li>
+                        <li class="mb-3">✓ Cruelty Free</li>
+                        <li class="">✓ Cocok untuk semua jenis kulit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="py-5" style="background: var(--pink-light);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Apa Kata Mereka?</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial text-center text-white">
+                        <p class="fs-5">"Serumnya bikin wajah aku glowing banget! Dalam 2 minggu udah kelihatan cerah merata!"</p>
+                        <strong>— Siska, 28</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial text-center text-white">
+                        <p class="fs-5">"Cushionnya ringan banget, ga berat di wajah. Coveragenya juara, cocok buat daily!"</p>
+                        <strong>— Nadia, 24</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial text-center text-white">
+                        <p class="fs-5">"Lip creamnya tahan lama banget meski makan gorengan tetap on point warnanya!"</p>
+                        <strong>— Rina, 31</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 text-center">
+        <div class="container">
+            <h3 class="mb-4">G2G Beauty</h3>
+            <div class="social-icons mb-4">
+                <a href="#" class="mx-2 text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="mx-2 text-white"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="mx-2 text-white"><i class="fab fa-shopee"></i></a> <!-- bisa diganti icon Shopee -->
+            </div>
+            <p>© 2025 G2G Beauty - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Font Awesome untuk icon sosial (opsional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
